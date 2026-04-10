@@ -210,8 +210,8 @@ img {
 
 section {
   position: relative;
-  margin-top: 24px;
-  padding: 34px 0;
+  margin-top: 16px;
+  padding: 24px 0;
 }
 
 .section-heading {
@@ -281,17 +281,17 @@ h1 span {
 }
 
 h2 {
-  max-width: 11ch;
-  font-size: clamp(2.5rem, 4vw, 4.9rem);
+  max-width: 12ch;
+  font-size: clamp(2rem, 3.2vw, 3.7rem);
   line-height: 0.95;
   letter-spacing: -0.05em;
 }
 
 .hero {
-  min-height: calc(100vh - 92px);
+  min-height: min(760px, calc(100vh - 110px));
   display: grid;
   grid-template-columns: 0.92fr 1.08fr;
-  gap: 26px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -335,7 +335,7 @@ h2 {
 
 .hero-copy {
   position: relative;
-  padding: 28px 0 28px 2px;
+  padding: 14px 0 14px 2px;
   background: transparent;
   border: 0;
   box-shadow: none;
@@ -367,7 +367,7 @@ h2 {
 .hero-text {
   position: relative;
   max-width: 540px;
-  margin-top: 20px;
+  margin-top: 14px;
   z-index: 1;
 }
 
@@ -382,7 +382,7 @@ h2 {
 
 .hero-actions {
   position: relative;
-  margin-top: 30px;
+  margin-top: 20px;
   z-index: 1;
 }
 
@@ -390,12 +390,12 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 54px;
-  padding: 0 22px;
+  min-height: 48px;
+  padding: 0 18px;
   border-radius: 999px;
   border: 1px solid transparent;
   text-decoration: none;
-  font-size: 0.82rem;
+  font-size: 0.76rem;
   font-weight: 700;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
@@ -423,13 +423,28 @@ h2 {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
+.btn-instagram {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(225, 72, 170, 0.3), rgba(130, 72, 255, 0.28));
+  gap: 8px;
+}
+
+.instagram-icon {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
 .btn-full {
   width: 100%;
 }
 
 .hero-points {
   position: relative;
-  margin: 26px 0 0;
+  margin: 18px 0 0;
   list-style: none;
   padding: 0;
   z-index: 1;
@@ -448,10 +463,10 @@ h2 {
 
 .hero-visual {
   position: relative;
-  min-height: 740px;
+  min-height: 620px;
   padding: 0;
   border: 0;
-  border-radius: 34px;
+  border-radius: 28px;
   overflow: visible;
   background: transparent;
   box-shadow: none;
@@ -468,11 +483,35 @@ h2 {
 .hero-image-wrap {
   position: relative;
   inset: auto;
-  height: 740px;
-  border-radius: 36px;
+  height: 620px;
+  border-radius: 28px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 42px 110px rgba(0, 0, 0, 0.76), 0 0 0 1px rgba(255, 214, 127, 0.06);
+}
+
+.opening-gallery {
+  padding-top: 8px;
+}
+
+.thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.thumb-card {
+  min-height: 160px;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.thumb-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.15) contrast(1.06) brightness(0.94);
 }
 
 .hero-image {
@@ -551,7 +590,7 @@ h2 {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
-  padding: 30px;
+  padding: 24px;
 }
 
 .statement-card::before,
@@ -570,7 +609,7 @@ h2 {
 }
 
 .statement-card {
-  min-height: 270px;
+  min-height: 220px;
   display: grid;
   align-items: flex-end;
 }
@@ -718,7 +757,7 @@ h2 {
 }
 
 .sound-stage {
-  min-height: 560px;
+  min-height: 460px;
   padding: 28px;
   background:
     radial-gradient(circle at 72% 20%, rgba(127, 57, 255, 0.18), transparent 26%),
@@ -819,7 +858,7 @@ h2 {
 .cta-card {
   display: grid;
   gap: 10px;
-  min-height: 260px;
+  min-height: 220px;
   color: inherit;
   text-decoration: none;
   background:
@@ -857,7 +896,7 @@ h2 {
 
 .lead-form input {
   width: 100%;
-  min-height: 58px;
+  min-height: 52px;
   padding: 0 16px;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.09);
@@ -1012,7 +1051,7 @@ h2 {
 
   section {
     margin-top: 12px;
-    padding: 24px 0;
+    padding: 18px 0;
   }
 
   h1 {
@@ -1021,7 +1060,7 @@ h2 {
   }
 
   h2 {
-    font-size: clamp(2.2rem, 10vw, 3.4rem);
+    font-size: clamp(1.85rem, 8.6vw, 2.7rem);
   }
 
   .hero-actions,
@@ -1040,7 +1079,16 @@ h2 {
   }
 
   .hero-image-wrap {
-    height: 520px;
+    height: 390px;
+  }
+
+  .thumb-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .thumb-card {
+    min-height: 88px;
   }
 
   .gallery-grid,

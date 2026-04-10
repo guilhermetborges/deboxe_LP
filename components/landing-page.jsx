@@ -2,21 +2,18 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-const galleryImages = [
+const openingThumbnails = [
   {
-    src: '/images/deboxe-gallery-truck.jpg',
-    alt: 'Caminhonete com estrutura de som automotivo personalizada.',
-    eyebrow: 'Estrutura sonora',
+    src: '/images/WhatsApp%20Image%202026-04-08%20at%2015.42.14.jpeg',
+    alt: 'Atleta em pose da collab Deboxe x Citrine.',
   },
   {
-    src: '/images/deboxe-gallery-athlete.jpg',
-    alt: 'Atleta em frente à pickup personalizada da campanha.',
-    eyebrow: 'Atitude feminina',
+    src: '/images/WhatsApp%20Image%202026-04-08%20at%2016.16.56.jpeg',
+    alt: 'Detalhe visual da campanha em ambiente de evento.',
   },
   {
-    src: '/images/deboxe-gallery-event.jpg',
-    alt: 'Atleta em evento com linguagem visual esportiva e urbana.',
-    eyebrow: 'Lifestyle de evento',
+    src: '/images/WhatsApp%20Image%202026-04-08%20at%2016.17.07.jpeg',
+    alt: 'Composição de look da collab com estética premium.',
   },
 ];
 
@@ -128,6 +125,21 @@ export default function LandingPage() {
           </p>
 
           <div className="hero-actions">
+            <a
+              href="https://www.instagram.com/deboxesport/"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-instagram pulse-target"
+              onClick={() => triggerPulse('hero-instagram')}
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="instagram-icon">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4.25" />
+                <circle cx="17.5" cy="6.5" r="1.25" />
+              </svg>
+              <span>Seguir no Instagram</span>
+            </a>
+
             <a href="#lead-form" className="btn btn-primary pulse-target" onClick={() => triggerPulse('lead')}>
               Quero fazer parte
             </a>
@@ -156,6 +168,21 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section id="gallery" className="opening-gallery shell" data-reveal>
+        <div className="section-heading narrow">
+          <p className="eyebrow">Galeria rápida</p>
+          <h2>Três cliques para sentir a energia da collab.</h2>
+        </div>
+
+        <div className="thumb-grid">
+          {openingThumbnails.map((image) => (
+            <figure className="thumb-card build-panel" key={image.src}>
+              <img src={image.src} alt={image.alt} className="thumb-image" />
+            </figure>
+          ))}
+        </div>
+      </section>
+
       <section id="lead-form" className="lead shell" data-reveal>
         <div className="lead-copy build-panel">
           <p className="eyebrow">Cadastro</p>
@@ -181,7 +208,7 @@ export default function LandingPage() {
               type="email"
               value={formState.email}
               onChange={(event) => setFormState((state) => ({ ...state, email: event.target.value }))}
-              placeholder="voce@exemplo.com"
+              placeholder="seuemail@exemplo.com"
               required
             />
           </label>
@@ -224,40 +251,6 @@ export default function LandingPage() {
             <p>
               Essa collab fala com quem gosta de treinar, se produzir, ir para evento e ser lembrada. O visual vem do preto piano, do dourado quente, da luz violeta e da estrutura de carro de som customizado reinterpretada como campanha premium.
             </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="gallery" className="gallery shell" data-reveal>
-        <div className="section-heading narrow">
-          <p className="eyebrow">Desejo</p>
-          <h2>Cada imagem mostra um lado da collab: produto, cena, presença e estilo de vida.</h2>
-        </div>
-
-        <div className="gallery-grid">
-          {galleryImages.map((image, index) => (
-            <article className={`gallery-card gallery-card-${index + 1} build-panel`} key={image.src}>
-              <div className="gallery-label">
-                <span>{image.eyebrow}</span>
-                <strong>0{index + 1}</strong>
-              </div>
-              <img src={image.src} alt={image.alt} className="gallery-image" />
-            </article>
-          ))}
-
-          <article className="quote-card build-panel pulse-target" onClick={() => triggerPulse('quote-1')}>
-            <p>Não é só roupa fitness.</p>
-            <strong>É imagem pessoal.</strong>
-          </article>
-
-          <article className="quote-card accent build-panel pulse-target" onClick={() => triggerPulse('quote-2')}>
-            <p>Não é só impacto visual.</p>
-            <strong>É atitude em movimento.</strong>
-          </article>
-
-          <article className="quote-card final build-panel pulse-target" onClick={() => triggerPulse('quote-3')}>
-            <p>Para quem não quer parecer igual.</p>
-            <strong>Para quem quer ser vista.</strong>
           </article>
         </div>
       </section>
