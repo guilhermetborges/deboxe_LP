@@ -131,6 +131,56 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section id="lead-form" className="lead shell" data-reveal>
+        <div className="lead-copy build-panel">
+          <p className="eyebrow">Cadastro</p>
+          <h2>Cadastro para receber seu presente</h2>
+        </div>
+
+        <form className="lead-form build-panel" onSubmit={handleSubmit}>
+          <label>
+            <span>Nome</span>
+            <input
+              type="text"
+              value={formState.name}
+              onChange={(event) => setFormState((state) => ({ ...state, name: event.target.value }))}
+              placeholder="Seu nome"
+              required
+            />
+          </label>
+
+          <label>
+            <span>E-mail</span>
+            <input
+              type="email"
+              value={formState.email}
+              onChange={(event) => setFormState((state) => ({ ...state, email: event.target.value }))}
+              placeholder="seuemail@exemplo.com"
+              required
+            />
+          </label>
+
+          <label>
+            <span>Telefone</span>
+            <input
+              type="tel"
+              value={formState.phone}
+              onChange={(event) => setFormState((state) => ({ ...state, phone: event.target.value }))}
+              placeholder="(00) 00000-0000"
+              required
+            />
+          </label>
+
+          <button type="submit" className="btn btn-primary btn-full pulse-target" onClick={() => triggerPulse('submit')}>
+            Quero receber novidades
+          </button>
+
+          <p className="form-feedback" role="status" aria-live="polite">
+            {feedback}
+          </p>
+        </form>
+      </section>
+
       <section id="hero" className="hero shell" data-reveal>
         <div className="hero-copy build-layer build-layer-copy">
           <p className="eyebrow">LANÇAMENTO DA COLLAB</p>
@@ -181,57 +231,6 @@ export default function LandingPage() {
             <img src="/images/deboxe-hero-main.jpg" alt="Imagem principal da collab Deboxe x Citrine." className="hero-image" />
           </figure>
         </div>
-      </section>
-
-      <section id="lead-form" className="lead shell" data-reveal>
-        <div className="lead-copy build-panel">
-          <p className="eyebrow">Cadastro</p>
-          <h2>Entre para essa nova fase.</h2>
-          <p>Cadastre seus dados para receber lançamentos, novidades e comunicações da collab antes da abertura para o público geral.</p>
-        </div>
-
-        <form className="lead-form build-panel" onSubmit={handleSubmit}>
-          <label>
-            <span>Nome</span>
-            <input
-              type="text"
-              value={formState.name}
-              onChange={(event) => setFormState((state) => ({ ...state, name: event.target.value }))}
-              placeholder="Seu nome"
-              required
-            />
-          </label>
-
-          <label>
-            <span>E-mail</span>
-            <input
-              type="email"
-              value={formState.email}
-              onChange={(event) => setFormState((state) => ({ ...state, email: event.target.value }))}
-              placeholder="seuemail@exemplo.com"
-              required
-            />
-          </label>
-
-          <label>
-            <span>Telefone</span>
-            <input
-              type="tel"
-              value={formState.phone}
-              onChange={(event) => setFormState((state) => ({ ...state, phone: event.target.value }))}
-              placeholder="(00) 00000-0000"
-              required
-            />
-          </label>
-
-          <button type="submit" className="btn btn-primary btn-full pulse-target" onClick={() => triggerPulse('submit')}>
-            Quero receber novidades
-          </button>
-
-          <p className="form-feedback" role="status" aria-live="polite">
-            {feedback}
-          </p>
-        </form>
       </section>
 
       <section id="manifesto" className="manifesto shell" data-reveal>
