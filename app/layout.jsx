@@ -3,7 +3,7 @@ import './globals.css';
 export const metadata = {
   title: 'Deboxe x Citrine | Collab Fitness Premium',
   description:
-    'Landing page premium da collab Deboxe x Citrine com esttica black and gold, linguagem automotiva e captacao de leads.',
+    'Landing page premium da collab Deboxe x Citrine com estética black and gold, linguagem automotiva e captação de leads.',
 };
 
 export default function RootLayout({ children }) {

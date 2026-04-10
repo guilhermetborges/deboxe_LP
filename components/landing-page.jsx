@@ -10,7 +10,7 @@ const galleryImages = [
   },
   {
     src: '/images/deboxe-gallery-athlete.jpg',
-    alt: 'Atleta em frente a pickup personalizada da campanha.',
+    alt: 'Atleta em frente à pickup personalizada da campanha.',
     eyebrow: 'Atitude feminina',
   },
   {
@@ -21,14 +21,14 @@ const galleryImages = [
 ];
 
 const buildPoints = [
-  'Voce quer treinar se sentindo forte e bem vestida',
-  'Procura roupa com presenca, e nao so funcionalidade',
+  'Você quer treinar se sentindo forte e bem vestida',
+  'Procura roupa com presença, e não só funcionalidade',
   'Gosta da mistura entre performance, evento e lifestyle',
   'Se conecta com marcas que criam comunidade de verdade',
-  'Quer vestir uma energia que tambem aparece fora do treino',
+  'Quer vestir uma energia que também aparece fora do treino',
 ];
 
-  const soundTags = ['Grade acustica', 'Paredao premium', 'Preto piano', 'Metal polido', 'Luz violeta'];
+const soundTags = ['Grade acústica', 'Paredão premium', 'Preto piano', 'Metal polido', 'Luz violeta'];
 
 export default function LandingPage() {
   const pageRef = useRef(null);
@@ -86,11 +86,11 @@ export default function LandingPage() {
     event.preventDefault();
 
     if (!formState.name || !formState.email || !formState.phone) {
-      setFeedback('Preencha nome, e-mail e telefone para entrar nessa lista premium.');
+      setFeedback('Preencha nome, e-mail e telefone para entrar nesta lista premium.');
       return;
     }
 
-    setFeedback(`Cadastro recebido, ${formState.name}. Agora voce esta na rota das novidades da collab.`);
+    setFeedback(`Cadastro recebido, ${formState.name}. Agora você está na rota das novidades da collab.`);
     setFormState({ name: '', email: '', phone: '' });
   };
 
@@ -105,14 +105,14 @@ export default function LandingPage() {
           <span className={`brand-mark ${activePulse === 'brand' ? 'is-pulsing' : ''}`}>X</span>
           <span className="brand-copy">
             <strong>Deboxe x Citrine</strong>
-            <small>Forca, atitude, comunidade e presenca.</small>
+            <small>Força, atitude, comunidade e presença.</small>
           </span>
         </a>
 
-        <nav className="topnav" aria-label="Navegacao principal">
+        <nav className="topnav" aria-label="Navegação principal">
           <a href="#manifesto">Manifesto</a>
           <a href="#gallery">Desejo</a>
-          <a href="#sound">Som & energia</a>
+          <a href="#sound">Som & Energia</a>
           <a href="#lead-form" className="nav-cta pulse-target" onClick={() => triggerPulse('nav-cta')}>
             Entrar agora
           </a>
@@ -121,12 +121,10 @@ export default function LandingPage() {
 
       <section id="hero" className="hero shell" data-reveal>
         <div className="hero-copy build-layer build-layer-copy">
-          <p className="eyebrow">LANCAMENTO DE COLLAB</p>
-          <h1>
-            Voce nao entra. <span>Voce faz parte.</span>
-          </h1>
+          <p className="eyebrow">LANÇAMENTO DA COLLAB</p>
+          <h1 className="hero-title">DEBOXE x CITRINE</h1>
           <p className="hero-text">
-            Deboxe x Citrine une roupa fitness premium, esttica urbana e energia de evento em uma collab feita para mulheres que querem presenca dentro e fora do treino.
+            Deboxe x Citrine une roupa fitness premium, estética urbana e energia de evento em uma collab feita para mulheres que querem presença dentro e fora do treino.
           </p>
 
           <div className="hero-actions">
@@ -153,7 +151,7 @@ export default function LandingPage() {
 
         <div className="hero-visual build-layer build-layer-visual">
           <figure className="hero-image-wrap pulse-target" onClick={() => triggerPulse('hero-image')}>
-            <img src="/images/deboxe-hero-main.jpg" alt="Principal imagem da collab Deboxe x Citrine." className="hero-image" />
+            <img src="/images/deboxe-hero-main.jpg" alt="Imagem principal da collab Deboxe x Citrine." className="hero-image" />
           </figure>
         </div>
       </section>
@@ -162,7 +160,7 @@ export default function LandingPage() {
         <div className="lead-copy build-panel">
           <p className="eyebrow">Cadastro</p>
           <h2>Entre para essa nova fase.</h2>
-          <p>Cadastre seus dados para receber lancamentos, novidades e comunicacoes da collab antes da abertura para o publico geral.</p>
+          <p>Cadastre seus dados para receber lançamentos, novidades e comunicações da collab antes da abertura para o público geral.</p>
         </div>
 
         <form className="lead-form build-panel" onSubmit={handleSubmit}>
@@ -212,13 +210,13 @@ export default function LandingPage() {
       <section id="manifesto" className="manifesto shell" data-reveal>
         <div className="section-heading narrow">
           <p className="eyebrow">Manifesto</p>
-          <h2>Nao e so uma colecao fitness. E uma imagem de marca para quem gosta de chamar presenca.</h2>
+          <h2>Não é só uma coleção fitness. É uma imagem de marca para quem gosta de chamar presença.</h2>
         </div>
 
         <div className="manifesto-grid">
           <article className="statement-card build-panel">
             <p>
-              A Deboxe chega com a forca do evento, do paredao e da rua. A Citrine entra com acabamento, desejo e curadoria. <strong>Juntas, elas transformam roupa esportiva em atitude visivel.</strong>
+              A Deboxe chega com a força do evento, do paredão e da rua. A Citrine entra com acabamento, desejo e curadoria. <strong>Juntas, elas transformam roupa esportiva em atitude visível.</strong>
             </p>
           </article>
 
@@ -233,7 +231,7 @@ export default function LandingPage() {
       <section id="gallery" className="gallery shell" data-reveal>
         <div className="section-heading narrow">
           <p className="eyebrow">Desejo</p>
-          <h2>Cada imagem mostra um lado da collab: produto, cena, presenca e estilo de vida.</h2>
+          <h2>Cada imagem mostra um lado da collab: produto, cena, presença e estilo de vida.</h2>
         </div>
 
         <div className="gallery-grid">
@@ -243,23 +241,22 @@ export default function LandingPage() {
                 <span>{image.eyebrow}</span>
                 <strong>0{index + 1}</strong>
               </div>
-              {/* Troque pelos arquivos reais das Images 1, 2 e 3 em public/images */}
               <img src={image.src} alt={image.alt} className="gallery-image" />
             </article>
           ))}
 
           <article className="quote-card build-panel pulse-target" onClick={() => triggerPulse('quote-1')}>
-            <p>Nao e so roupa fitness.</p>
-            <strong>E imagem pessoal.</strong>
+            <p>Não é só roupa fitness.</p>
+            <strong>É imagem pessoal.</strong>
           </article>
 
           <article className="quote-card accent build-panel pulse-target" onClick={() => triggerPulse('quote-2')}>
-            <p>Nao e so impacto visual.</p>
-            <strong>E atitude em movimento.</strong>
+            <p>Não é só impacto visual.</p>
+            <strong>É atitude em movimento.</strong>
           </article>
 
           <article className="quote-card final build-panel pulse-target" onClick={() => triggerPulse('quote-3')}>
-            <p>Para quem nao quer parecer igual.</p>
+            <p>Para quem não quer parecer igual.</p>
             <strong>Para quem quer ser vista.</strong>
           </article>
         </div>
@@ -267,8 +264,8 @@ export default function LandingPage() {
 
       <section className="identity shell" data-reveal>
         <div className="section-heading left narrow">
-          <p className="eyebrow">Conexao</p>
-          <h2>Se voce se reconhece nisso, essa collab foi pensada para o seu repertorio de vida.</h2>
+          <p className="eyebrow">Conexão</p>
+          <h2>Se você se reconhece nisso, essa collab foi pensada para o seu repertório de vida.</h2>
         </div>
 
         <div className="identity-grid">
@@ -288,16 +285,16 @@ export default function LandingPage() {
 
           <aside className="identity-highlight build-panel">
             <span className="community-x">X</span>
-            <p>Entao a mensagem e simples: voce nao esta olhando so para um drop.</p>
-            <strong>Voce esta entrando em uma comunidade.</strong>
+            <p>Então a mensagem é simples: você não está olhando só para um drop.</p>
+            <strong>Você está entrando em uma comunidade.</strong>
           </aside>
         </div>
       </section>
 
       <section id="sound" className="sound-section shell" data-reveal>
         <div className="section-heading narrow">
-          <p className="eyebrow">Som & energia</p>
-          <h2>O universo do carro de som aparece aqui como textura de poder, brilho e pressao visual.</h2>
+          <p className="eyebrow">Som & Energia</p>
+          <h2>O universo do carro de som aparece aqui como textura de poder, brilho e pressão visual.</h2>
         </div>
 
         <div className="sound-grid">
@@ -324,10 +321,10 @@ export default function LandingPage() {
             <div className="sound-wave sound-wave-bottom" aria-hidden="true" />
           </div>
 
-          <div className="sound-copy build-panel">
-            <p>
-              A referencia automotiva nao entra como fantasia. Ela entra como linguagem: parede de woofer, metal escuro, reflexo verniz, luz roxa e sensacao de grave. Cada clique reage como um pulso para reforcar a ideia de energia e presenca.
-            </p>
+            <div className="sound-copy build-panel">
+              <p>
+                A referência automotiva não entra como fantasia. Ela entra como linguagem: parede de woofer, metal escuro, reflexo verniz, luz roxa e sensação de grave. Cada clique reage como um pulso para reforçar a ideia de energia e presença.
+              </p>
 
             <div className="sound-tags">
               {soundTags.map((tag) => (
@@ -351,7 +348,7 @@ export default function LandingPage() {
           <a href="https://citrineloja.com.br/" target="_blank" rel="noreferrer" className="cta-card build-panel pulse-target" onClick={() => triggerPulse('citrine-card')}>
             <span>Loja oficial</span>
             <strong>Acessar loja Citrine</strong>
-            <small>Pecas, desejo e assinatura da collab.</small>
+            <small>Peças, desejo e assinatura da collab.</small>
           </a>
 
           <a href="https://www.instagram.com/deboxesport/" target="_blank" rel="noreferrer" className="cta-card build-panel pulse-target" onClick={() => triggerPulse('instagram-card')}>
