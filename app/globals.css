@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap');
 
 :root {
   --bg: #040406;
@@ -36,7 +36,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'Oxanium', sans-serif;
+  font-family: 'Manrope', sans-serif;
   color: var(--text);
   background:
     radial-gradient(circle at 12% 12%, rgba(255, 214, 127, 0.18), transparent 19%),
@@ -172,7 +172,7 @@ img {
 .identity-item span,
 .cta-card span {
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
 }
 
 .brand-copy small,
@@ -196,7 +196,7 @@ img {
 }
 
 .topnav a {
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   text-decoration: none;
 }
 
@@ -241,7 +241,7 @@ h2,
 .identity-highlight strong,
 .cta-card strong,
 .hero-caption strong {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Sora', sans-serif;
 }
 
 h1,
@@ -253,16 +253,16 @@ figure {
 
 h1 {
   max-width: 12ch;
-  font-size: clamp(2.4rem, 4.8vw, 4.2rem);
-  line-height: 0.94;
-  letter-spacing: -0.04em;
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
   text-wrap: balance;
   text-shadow: 0 0 34px rgba(255, 214, 127, 0.06);
 }
 
 .hero-title {
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
 }
 
 h1 span,
@@ -282,9 +282,9 @@ h1 span {
 
 h2 {
   max-width: 12ch;
-  font-size: clamp(2rem, 3.2vw, 3.7rem);
-  line-height: 0.95;
-  letter-spacing: -0.05em;
+  font-size: clamp(1.7rem, 2.8vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 .hero {
@@ -492,6 +492,16 @@ h2 {
 
 .opening-gallery {
   padding-top: 8px;
+}
+
+.opening-caption {
+  margin: 0;
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(0.68rem, 2.1vw, 1rem);
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  color: var(--gold-soft);
 }
 
 .thumb-grid {
@@ -889,7 +899,7 @@ h2 {
 
 .lead-form label span {
   font-size: 0.78rem;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -1042,7 +1052,7 @@ h2 {
   .topnav a {
     white-space: nowrap;
     font-size: 0.64rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.06em;
   }
 
   .nav-cta {
@@ -1055,12 +1065,12 @@ h2 {
   }
 
   h1 {
-    font-size: clamp(1.9rem, 8.5vw, 2.8rem);
+    font-size: clamp(1.7rem, 7.8vw, 2.2rem);
     max-width: none;
   }
 
   h2 {
-    font-size: clamp(1.85rem, 8.6vw, 2.7rem);
+    font-size: clamp(1.45rem, 6.8vw, 2rem);
   }
 
   .hero-actions,
@@ -1085,6 +1095,11 @@ h2 {
   .thumb-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 8px;
+  }
+
+  .opening-caption {
+    font-size: 0.62rem;
+    letter-spacing: 0.01em;
   }
 
   .thumb-card {

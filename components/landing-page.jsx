@@ -4,16 +4,16 @@ import { useEffect, useRef, useState } from 'react';
 
 const openingThumbnails = [
   {
+    src: '/images/WhatsApp%20Image%202026-04-08%20at%2015.42.14%20%281%29.jpeg',
+    alt: 'Imagem de abertura da collab Deboxe x Citrine.',
+  },
+  {
     src: '/images/WhatsApp%20Image%202026-04-08%20at%2015.42.14.jpeg',
     alt: 'Atleta em pose da collab Deboxe x Citrine.',
   },
   {
     src: '/images/WhatsApp%20Image%202026-04-08%20at%2016.16.56.jpeg',
     alt: 'Detalhe visual da campanha em ambiente de evento.',
-  },
-  {
-    src: '/images/WhatsApp%20Image%202026-04-08%20at%2016.17.07.jpeg',
-    alt: 'Composição de look da collab com estética premium.',
   },
 ];
 
@@ -116,6 +116,21 @@ export default function LandingPage() {
         </nav>
       </header>
 
+      <section id="gallery" className="opening-gallery shell" data-reveal>
+        <div className="section-heading narrow">
+          <p className="eyebrow">Galeria rápida</p>
+          <p className="opening-caption">Três cliques para sentir a energia da collab.</p>
+        </div>
+
+        <div className="thumb-grid">
+          {openingThumbnails.map((image) => (
+            <figure className="thumb-card build-panel" key={image.src}>
+              <img src={image.src} alt={image.alt} className="thumb-image" />
+            </figure>
+          ))}
+        </div>
+      </section>
+
       <section id="hero" className="hero shell" data-reveal>
         <div className="hero-copy build-layer build-layer-copy">
           <p className="eyebrow">LANÇAMENTO DA COLLAB</p>
@@ -165,21 +180,6 @@ export default function LandingPage() {
           <figure className="hero-image-wrap pulse-target" onClick={() => triggerPulse('hero-image')}>
             <img src="/images/deboxe-hero-main.jpg" alt="Imagem principal da collab Deboxe x Citrine." className="hero-image" />
           </figure>
-        </div>
-      </section>
-
-      <section id="gallery" className="opening-gallery shell" data-reveal>
-        <div className="section-heading narrow">
-          <p className="eyebrow">Galeria rápida</p>
-          <h2>Três cliques para sentir a energia da collab.</h2>
-        </div>
-
-        <div className="thumb-grid">
-          {openingThumbnails.map((image) => (
-            <figure className="thumb-card build-panel" key={image.src}>
-              <img src={image.src} alt={image.alt} className="thumb-image" />
-            </figure>
-          ))}
         </div>
       </section>
 
