@@ -236,7 +236,7 @@ export default function LandingPage() {
           <p className="eyebrow">LANÇAMENTO DA COLLAB</p>
           <h1 className="hero-title">DEBOXE x CITRINE</h1>
           <p className="hero-text">
-            Deboxe x Citrine une roupa fitness premium, estética urbana e energia de evento em uma deboxesports feita para mulheres que querem presença dentro e fora do treino.
+            Deboxe x Citrine une roupa fitness premium, estética urbana e energia de evento em uma coleção feita para mulheres que querem presença dentro e fora do treino.
           </p>
 
           <div className="hero-actions">
@@ -299,7 +299,7 @@ export default function LandingPage() {
 
           <article className="detail-card build-panel">
             <p>
-              Essa deboxesports fala com quem gosta de treinar, se produzir, ir para evento e ser lembrada. O visual vem do preto piano, do dourado quente, da luz violeta e da estrutura de carro de som customizado reinterpretada como campanha premium.
+              Essa coleção fala com quem gosta de treinar, se produzir, ir para evento e ser lembrada. O visual vem do preto piano, do dourado quente, da luz violeta e da estrutura de carro de som customizado reinterpretada como campanha premium.
             </p>
           </article>
         </div>
@@ -309,7 +309,7 @@ export default function LandingPage() {
         <div className="section-heading left narrow">
           <img src={logoSecondary} alt="Logo Deboxe alternativa" className="section-logo" />
           <p className="eyebrow">Conexão</p>
-          <h2>Se você se reconhece nisso, essa deboxesports foi pensada para o seu repertório de vida.</h2>
+          <h2>Se você se reconhece nisso, essa coleção foi pensada para o seu repertório de vida.</h2>
         </div>
 
         <div className="identity-grid">
@@ -404,7 +404,7 @@ export default function LandingPage() {
         <div className="cta-copy build-panel">
           <img src={logoPrimary} alt="Logo Deboxe" className="panel-logo" />
           <p className="eyebrow">Direcionamentos</p>
-          <h2>Veja a deboxesports nos canais onde compra, acompanha e se conecta com a marca.</h2>
+          <h2>Veja a coleção nos canais onde compra, acompanha e se conecta com a marca.</h2>
           <p>Entre na loja da Citrine para conhecer o universo do produto e acompanhe a Deboxe no Instagram para ver a energia da campanha acontecendo ao vivo.</p>
         </div>
 
@@ -412,7 +412,7 @@ export default function LandingPage() {
           <a href="https://citrineloja.com.br/" target="_blank" rel="noreferrer" className="cta-card build-panel pulse-target" onClick={() => triggerPulse('citrine-card')}>
             <span>Loja oficial</span>
             <strong>Acessar loja Citrine</strong>
-            <small>Peças, desejo e assinatura da deboxesports.</small>
+            <small>Peças, desejo e assinatura da Deboxe x Citrine.</small>
           </a>
 
           <a href="https://www.instagram.com/deboxesport/" target="_blank" rel="noreferrer" className="cta-card build-panel pulse-target" onClick={() => triggerPulse('instagram-card')}>
