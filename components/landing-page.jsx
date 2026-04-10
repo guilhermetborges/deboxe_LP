@@ -5,11 +5,11 @@ import { useEffect, useRef, useState } from 'react';
 const openingThumbnails = [
   {
     src: '/images/WhatsApp%20Image%202026-04-08%20at%2015.42.14%20%281%29.jpeg',
-    alt: 'Imagem de abertura da collab Deboxe x Citrine.',
+    alt: 'Imagem de abertura da deboxesports Deboxe x Citrine.',
   },
   {
     src: '/images/deboxe-gallery-truck.jpg',
-    alt: 'Caminhonete da collab com estética automotiva premium.',
+    alt: 'Caminhonete da deboxesports com estética automotiva premium.',
   },
   {
     src: '/images/WhatsApp%20Image%202026-04-08%20at%2016.16.56.jpeg',
@@ -28,7 +28,7 @@ const carouselImages = [
   },
   {
     src: '/images/WhatsApp%20Image%202026-04-08%20at%2016.16.56.jpeg',
-    alt: 'Composição visual da collab em ambiente externo.',
+    alt: 'Composição visual da deboxesports em ambiente externo.',
   },
   {
     src: '/images/WhatsApp%20Image%202026-04-08%20at%2016.17.07.jpeg',
@@ -129,7 +129,7 @@ export default function LandingPage() {
         throw new Error(`Request failed with status ${response.status}`);
       }
 
-      setFeedback(`Cadastro recebido, ${formState.name}. Agora você está na rota das novidades da collab.`);
+      setFeedback(`Cadastro recebido, ${formState.name}. Agora você está na rota das novidades da deboxesports.`);
       setFormState({ name: '', email: '', phone: '' });
     } catch (error) {
       setFeedback('Não foi possível enviar seu cadastro agora. Tente novamente em instantes.');
@@ -168,7 +168,7 @@ export default function LandingPage() {
       <section id="gallery" className="opening-gallery shell" data-reveal>
         <div className="section-heading narrow">
           <p className="eyebrow">Galeria rápida</p>
-          <p className="opening-caption">Três cliques para sentir a energia da collab.</p>
+          <p className="opening-caption">Três cliques para sentir a energia da deboxesports.</p>
         </div>
 
         <div className="thumb-grid">
@@ -236,7 +236,7 @@ export default function LandingPage() {
           <p className="eyebrow">LANÇAMENTO DA COLLAB</p>
           <h1 className="hero-title">DEBOXE x CITRINE</h1>
           <p className="hero-text">
-            Deboxe x Citrine une roupa fitness premium, estética urbana e energia de evento em uma collab feita para mulheres que querem presença dentro e fora do treino.
+            Deboxe x Citrine une roupa fitness premium, estética urbana e energia de evento em uma deboxesports feita para mulheres que querem presença dentro e fora do treino.
           </p>
 
           <div className="hero-actions">
@@ -269,7 +269,7 @@ export default function LandingPage() {
             </a>
           </div>
 
-          <ul className="hero-points" aria-label="Valores da collab">
+          <ul className="hero-points" aria-label="Valores da deboxesports">
             <li>Modelagem com impacto visual</li>
             <li>Luxo esportivo com linguagem automotiva</li>
             <li>Comunidade feminina que vive treino e evento</li>
@@ -278,7 +278,7 @@ export default function LandingPage() {
 
         <div className="hero-visual build-layer build-layer-visual">
           <figure className="hero-image-wrap pulse-target" onClick={() => triggerPulse('hero-image')}>
-            <img src="/images/deboxe-hero-main.jpg" alt="Imagem principal da collab Deboxe x Citrine." className="hero-image" />
+            <img src="/images/deboxe-hero-main.jpg" alt="Imagem principal da deboxesports Deboxe x Citrine." className="hero-image" />
           </figure>
         </div>
       </section>
@@ -299,7 +299,7 @@ export default function LandingPage() {
 
           <article className="detail-card build-panel">
             <p>
-              Essa collab fala com quem gosta de treinar, se produzir, ir para evento e ser lembrada. O visual vem do preto piano, do dourado quente, da luz violeta e da estrutura de carro de som customizado reinterpretada como campanha premium.
+              Essa deboxesports fala com quem gosta de treinar, se produzir, ir para evento e ser lembrada. O visual vem do preto piano, do dourado quente, da luz violeta e da estrutura de carro de som customizado reinterpretada como campanha premium.
             </p>
           </article>
         </div>
@@ -309,7 +309,7 @@ export default function LandingPage() {
         <div className="section-heading left narrow">
           <img src={logoSecondary} alt="Logo Deboxe alternativa" className="section-logo" />
           <p className="eyebrow">Conexão</p>
-          <h2>Se você se reconhece nisso, essa collab foi pensada para o seu repertório de vida.</h2>
+          <h2>Se você se reconhece nisso, essa deboxesports foi pensada para o seu repertório de vida.</h2>
         </div>
 
         <div className="identity-grid">
@@ -388,10 +388,10 @@ export default function LandingPage() {
         <div className="section-heading narrow">
           <img src={logoSecondary} alt="Logo Deboxe alternativa" className="section-logo" />
           <p className="eyebrow">Mais fotos</p>
-          <p className="opening-caption">Deslize para ver mais imagens da collab.</p>
+          <p className="opening-caption">Deslize para ver mais imagens da deboxesports.</p>
         </div>
 
-        <div className="carousel-track" aria-label="Carrossel de fotos da collab">
+        <div className="carousel-track" aria-label="Carrossel de fotos da deboxesports">
           {carouselImages.map((image) => (
             <figure className="carousel-slide build-panel" key={image.src}>
               <img src={image.src} alt={image.alt} className="carousel-image" />
@@ -404,7 +404,7 @@ export default function LandingPage() {
         <div className="cta-copy build-panel">
           <img src={logoPrimary} alt="Logo Deboxe" className="panel-logo" />
           <p className="eyebrow">Direcionamentos</p>
-          <h2>Veja a collab nos canais onde compra, acompanha e se conecta com a marca.</h2>
+          <h2>Veja a deboxesports nos canais onde compra, acompanha e se conecta com a marca.</h2>
           <p>Entre na loja da Citrine para conhecer o universo do produto e acompanhe a Deboxe no Instagram para ver a energia da campanha acontecendo ao vivo.</p>
         </div>
 
@@ -412,7 +412,7 @@ export default function LandingPage() {
           <a href="https://citrineloja.com.br/" target="_blank" rel="noreferrer" className="cta-card build-panel pulse-target" onClick={() => triggerPulse('citrine-card')}>
             <span>Loja oficial</span>
             <strong>Acessar loja Citrine</strong>
-            <small>Peças, desejo e assinatura da collab.</small>
+            <small>Peças, desejo e assinatura da deboxesports.</small>
           </a>
 
           <a href="https://www.instagram.com/deboxesport/" target="_blank" rel="noreferrer" className="cta-card build-panel pulse-target" onClick={() => triggerPulse('instagram-card')}>
