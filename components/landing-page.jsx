@@ -53,6 +53,7 @@ export default function LandingPage() {
   const [activePulse, setActivePulse] = useState(null);
   const [formState, setFormState] = useState({ name: '', email: '', phone: '' });
   const [feedback, setFeedback] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const sections = document.querySelectorAll('[data-reveal]');
@@ -100,7 +101,7 @@ export default function LandingPage() {
     triggerPulse.timer = window.setTimeout(() => setActivePulse(null), 340);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!formState.name || !formState.email || !formState.phone) {
@@ -108,8 +109,33 @@ export default function LandingPage() {
       return;
     }
 
-    setFeedback(`Cadastro recebido, ${formState.name}. Agora você está na rota das novidades da collab.`);
-    setFormState({ name: '', email: '', phone: '' });
+    setIsSubmitting(true);
+    setFeedback('Enviando seu cadastro...');
+
+    try {
+      const response = await fetch('https://jbxaqzwpnsijxlkqdgzl.supabase.co/functions/v1/citrine-deboxe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          phone: formState.phone,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+
+      setFeedback(`Cadastro recebido, ${formState.name}. Agora você está na rota das novidades da collab.`);
+      setFormState({ name: '', email: '', phone: '' });
+    } catch (error) {
+      setFeedback('Não foi possível enviar seu cadastro agora. Tente novamente em instantes.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -195,8 +221,8 @@ export default function LandingPage() {
             />
           </label>
 
-          <button type="submit" className="btn btn-primary btn-full pulse-target" onClick={() => triggerPulse('submit')}>
-            Quero receber novidades
+          <button type="submit" className="btn btn-primary btn-full pulse-target" onClick={() => triggerPulse('submit')} disabled={isSubmitting}>
+            {isSubmitting ? 'Enviando...' : 'Quero receber novidades'}
           </button>
 
           <p className="form-feedback" role="status" aria-live="polite">

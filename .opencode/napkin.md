@@ -11,6 +11,8 @@
    Do instead: create the smallest coherent file set (`index.html`, `styles.css`, `script.js`) before layering visual polish.
 2. **[2026-04-09] Validate deployment readiness with a production build**
    Do instead: run `npm run build` after hosting config changes and only conclude setup when the build succeeds.
+3. **[2026-04-10] Lead forms should send payloads from the client only when required**
+   Do instead: post the minimal field set to the configured endpoint, show submitting state, and handle request failures without clearing the form.
 
 ## Frontend Delivery
 1. **[2026-04-08] Premium landing pages need image-replacement hooks**
