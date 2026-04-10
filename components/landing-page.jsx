@@ -8,12 +8,31 @@ const openingThumbnails = [
     alt: 'Imagem de abertura da collab Deboxe x Citrine.',
   },
   {
-    src: '/images/WhatsApp%20Image%202026-04-08%20at%2015.42.14.jpeg',
-    alt: 'Atleta em pose da collab Deboxe x Citrine.',
+    src: '/images/deboxe-gallery-truck.jpg',
+    alt: 'Caminhonete da collab com estética automotiva premium.',
   },
   {
     src: '/images/WhatsApp%20Image%202026-04-08%20at%2016.16.56.jpeg',
     alt: 'Detalhe visual da campanha em ambiente de evento.',
+  },
+];
+
+const carouselImages = [
+  {
+    src: '/images/WhatsApp%20Image%202026-04-08%20at%2015.42.14%20%281%29.jpeg',
+    alt: 'Atleta em close da campanha Deboxe x Citrine.',
+  },
+  {
+    src: '/images/WhatsApp%20Image%202026-04-08%20at%2015.42.14.jpeg',
+    alt: 'Atleta ao lado do carro da campanha.',
+  },
+  {
+    src: '/images/WhatsApp%20Image%202026-04-08%20at%2016.16.56.jpeg',
+    alt: 'Composição visual da collab em ambiente externo.',
+  },
+  {
+    src: '/images/WhatsApp%20Image%202026-04-08%20at%2016.17.07.jpeg',
+    alt: 'Look da campanha com linguagem urbana premium.',
   },
 ];
 
@@ -134,7 +153,7 @@ export default function LandingPage() {
       <section id="lead-form" className="lead shell" data-reveal>
         <div className="lead-copy build-panel">
           <p className="eyebrow">Cadastro</p>
-          <h2>Cadastro para receber seu presente</h2>
+          <h2 className="lead-title-single-line">Cadastro para receber seu presente</h2>
         </div>
 
         <form className="lead-form build-panel" onSubmit={handleSubmit}>
@@ -326,6 +345,21 @@ export default function LandingPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="photo-carousel shell" data-reveal>
+        <div className="section-heading narrow">
+          <p className="eyebrow">Mais fotos</p>
+          <p className="opening-caption">Deslize para ver mais imagens da collab.</p>
+        </div>
+
+        <div className="carousel-track" aria-label="Carrossel de fotos da collab">
+          {carouselImages.map((image) => (
+            <figure className="carousel-slide build-panel" key={image.src}>
+              <img src={image.src} alt={image.alt} className="carousel-image" />
+            </figure>
+          ))}
         </div>
       </section>
 
