@@ -229,7 +229,7 @@ export default function LandingPage() {
 
       <section id="hero" className="hero shell" data-reveal>
         <div className="hero-copy build-layer build-layer-copy">
-          <p className="eyebrow">LANÇAMENTO DA COLLAB</p>
+          <p className="eyebrow">LANÇAMENTO DEBOXESPORTS</p>
           <h1 className="hero-title">DEBOXE x CITRINE</h1>
           <p className="hero-text">
             Deboxe x Citrine une roupa fitness premium, estética urbana e energia de evento em uma coleção feita para mulheres que querem presença dentro e fora do treino.
