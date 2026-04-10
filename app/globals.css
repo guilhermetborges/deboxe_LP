@@ -160,6 +160,13 @@ img {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 20px 42px rgba(0, 0, 0, 0.68), 0 0 24px rgba(255, 214, 127, 0.12);
 }
 
+.brand-logo-img {
+  width: 78%;
+  height: 78%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(255, 214, 127, 0.32));
+}
+
 .brand-copy {
   display: grid;
   gap: 4px;
@@ -218,6 +225,20 @@ section {
   display: grid;
   gap: 12px;
   margin-bottom: 28px;
+}
+
+.section-logo,
+.panel-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(255, 214, 127, 0.26));
+}
+
+.panel-logo {
+  width: 66px;
+  height: 66px;
+  margin-bottom: 8px;
 }
 
 .section-heading.narrow {
@@ -792,8 +813,15 @@ h2 {
   position: absolute;
   top: 18px;
   right: 20px;
-  font-size: clamp(5rem, 9vw, 8rem);
-  opacity: 0.22;
+  width: clamp(70px, 12vw, 124px);
+  opacity: 0.3;
+}
+
+.community-logo-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(255, 214, 127, 0.24));
 }
 
 .identity-highlight strong {
@@ -1068,6 +1096,11 @@ h2 {
     border-radius: 12px;
   }
 
+  .brand-logo-img {
+    width: 75%;
+    height: 75%;
+  }
+
   .brand-copy {
     gap: 2px;
   }
@@ -1143,6 +1176,16 @@ h2 {
   .opening-caption {
     font-size: 0.62rem;
     letter-spacing: 0.01em;
+  }
+
+  .section-logo,
+  .panel-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .panel-logo {
+    margin-bottom: 4px;
   }
 
   .thumb-card {

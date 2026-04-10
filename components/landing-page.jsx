@@ -45,6 +45,8 @@ const buildPoints = [
 ];
 
 const soundTags = ['Grade acústica', 'Paredão premium', 'Preto piano', 'Metal polido', 'Luz violeta'];
+const logoPrimary = '/images/LOGO%20-deboxe.png';
+const logoSecondary = '/images/logo2.png';
 
 export default function LandingPage() {
   const pageRef = useRef(null);
@@ -118,7 +120,9 @@ export default function LandingPage() {
 
       <header className="topbar shell">
         <a href="#hero" className="brand pulse-target" onClick={() => triggerPulse('brand')}>
-          <span className={`brand-mark ${activePulse === 'brand' ? 'is-pulsing' : ''}`}>X</span>
+          <span className={`brand-mark ${activePulse === 'brand' ? 'is-pulsing' : ''}`}>
+            <img src={logoPrimary} alt="Logo Deboxe" className="brand-logo-img" />
+          </span>
           <span className="brand-copy">
             <strong>Deboxe x Citrine</strong>
             <small>Força, atitude, comunidade e presença.</small>
@@ -152,6 +156,7 @@ export default function LandingPage() {
 
       <section id="lead-form" className="lead shell" data-reveal>
         <div className="lead-copy build-panel">
+          <img src={logoSecondary} alt="Logo Deboxe alternativa" className="panel-logo" />
           <p className="eyebrow">Cadastro</p>
           <h2 className="lead-title-single-line">Cadastro para receber seu presente</h2>
         </div>
@@ -254,6 +259,7 @@ export default function LandingPage() {
 
       <section id="manifesto" className="manifesto shell" data-reveal>
         <div className="section-heading narrow">
+          <img src={logoPrimary} alt="Logo Deboxe" className="section-logo" />
           <p className="eyebrow">Manifesto</p>
           <h2>Não é só uma coleção fitness. É uma imagem de marca para quem gosta de chamar presença.</h2>
         </div>
@@ -275,6 +281,7 @@ export default function LandingPage() {
 
       <section className="identity shell" data-reveal>
         <div className="section-heading left narrow">
+          <img src={logoSecondary} alt="Logo Deboxe alternativa" className="section-logo" />
           <p className="eyebrow">Conexão</p>
           <h2>Se você se reconhece nisso, essa collab foi pensada para o seu repertório de vida.</h2>
         </div>
@@ -295,7 +302,9 @@ export default function LandingPage() {
           </div>
 
           <aside className="identity-highlight build-panel">
-            <span className="community-x">X</span>
+            <span className="community-x">
+              <img src={logoSecondary} alt="Logo Deboxe" className="community-logo-img" />
+            </span>
             <p>Então a mensagem é simples: você não está olhando só para um drop.</p>
             <strong>Você está entrando em uma comunidade.</strong>
           </aside>
@@ -304,6 +313,7 @@ export default function LandingPage() {
 
       <section id="sound" className="sound-section shell" data-reveal>
         <div className="section-heading narrow">
+          <img src={logoPrimary} alt="Logo Deboxe" className="section-logo" />
           <p className="eyebrow">Som & Energia</p>
           <h2>O universo do carro de som aparece aqui como textura de poder, brilho e pressão visual.</h2>
         </div>
@@ -350,6 +360,7 @@ export default function LandingPage() {
 
       <section className="photo-carousel shell" data-reveal>
         <div className="section-heading narrow">
+          <img src={logoSecondary} alt="Logo Deboxe alternativa" className="section-logo" />
           <p className="eyebrow">Mais fotos</p>
           <p className="opening-caption">Deslize para ver mais imagens da collab.</p>
         </div>
@@ -365,6 +376,7 @@ export default function LandingPage() {
 
       <section className="cta-band shell" data-reveal>
         <div className="cta-copy build-panel">
+          <img src={logoPrimary} alt="Logo Deboxe" className="panel-logo" />
           <p className="eyebrow">Direcionamentos</p>
           <h2>Veja a collab nos canais onde compra, acompanha e se conecta com a marca.</h2>
           <p>Entre na loja da Citrine para conhecer o universo do produto e acompanhe a Deboxe no Instagram para ver a energia da campanha acontecendo ao vivo.</p>
