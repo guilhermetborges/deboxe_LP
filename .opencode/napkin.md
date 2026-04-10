@@ -21,5 +21,7 @@
    Do instead: apply `white-space: nowrap` only to short CTAs/titles (for example cadastro badge), and keep long section headlines with normal wrapping.
 2. **[2026-04-10] Avoid narrow mobile text columns in section headings**
    Do instead: remove small `max-width` limits on mobile `h2` and reduce font size slightly so lines wrap naturally without vertical word stacking.
-3. **[2026-04-08] Avoid generic AI-looking UI**
+3. **[2026-04-10] Prefer vivid gradients over flat dark panels**
+   Do instead: use a tighter palette with brighter accent glows, cleaner glass surfaces, and a modern sans pairing to avoid the generic AI look.
+4. **[2026-04-08] Avoid generic AI-looking UI**
    Do instead: commit to a specific art direction, distinctive typography, and brand-shaped layout choices instead of template sections.
