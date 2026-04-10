@@ -140,10 +140,6 @@ export default function LandingPage() {
 
   return (
     <main className="landing-page" ref={pageRef}>
-      <div className="ambient ambient-left" aria-hidden="true" />
-      <div className="ambient ambient-right" aria-hidden="true" />
-      <div className="grain" aria-hidden="true" />
-
       <header className="topbar shell">
         <a href="#hero" className="brand pulse-target" onClick={() => triggerPulse('brand')}>
           <span className={`brand-mark ${activePulse === 'brand' ? 'is-pulsing' : ''}`}>
