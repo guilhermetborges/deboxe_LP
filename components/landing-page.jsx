@@ -274,7 +274,11 @@ export default function LandingPage() {
 
         <div className="hero-visual build-layer build-layer-visual">
           <figure className="hero-image-wrap pulse-target" onClick={() => triggerPulse('hero-image')}>
-            <img src="/images/deboxe-hero-main.jpg" alt="Imagem principal da deboxesports Deboxe x Citrine." className="hero-image" />
+            <img
+              src="/images/WhatsApp%20Image%202026-04-08%20at%2015.42.14%20%281%29.jpeg"
+              alt="Imagem principal da deboxesports Deboxe x Citrine."
+              className="hero-image"
+            />
           </figure>
         </div>
       </section>
