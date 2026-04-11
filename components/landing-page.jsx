@@ -419,6 +419,15 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <footer className="landing-footer shell">
+        <p>
+          desenvolvido por{' '}
+          <a href="https://gtbdev.netlify.app/" target="_blank" rel="noreferrer" className="landing-footer-link">
+            Guilherme Teodoro
+          </a>
+        </p>
+      </footer>
+
     </main>
   );
 }
